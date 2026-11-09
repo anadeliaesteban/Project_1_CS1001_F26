@@ -12,7 +12,14 @@ import data
 
 # Part 1: vowel_count
 def vowel_count(text: str) -> int:
+    count = 0
+    for letter in word:
+        if letter.lower() in "aeiou":
+            count += 1
+    return count
+    
     # TODO: Purpose: describe what this function computes.
+    # Total characters returned
     # TODO: Input(s): explain each parameter.
     # TODO: Output: explain what the function returns.
     # TODO: Replace this exception with your implementation.
@@ -21,6 +28,11 @@ def vowel_count(text: str) -> int:
 
 # Part 2: short_lists
 def short_lists(items: list[list[int]]) -> list[list[int]]:
+    result = []
+    for item in numbers:
+        if len(item) == 2:
+            result.append(item)
+    return result
     # TODO: Purpose: describe what this function computes.
     # TODO: Input(s): explain each parameter.
     # TODO: Output: explain what the function returns.
@@ -30,6 +42,14 @@ def short_lists(items: list[list[int]]) -> list[list[int]]:
 
 # Part 3: ascending_pairs
 def ascending_pairs(items: list[list[int]]) -> list[list[int]]:
+    result = []
+    for item in numbers:
+        if len(item)== 2:
+            result.append(sorted(item))
+        else: 
+            result.appen(item.copy())
+        return result
+            
     # TODO: Purpose: describe what this function computes.
     # TODO: Input(s): explain each parameter.
     # TODO: Output: explain what the function returns.
@@ -39,6 +59,12 @@ def ascending_pairs(items: list[list[int]]) -> list[list[int]]:
 
 # Part 4: add_prices
 def add_prices(first: data.Price, second: data.Price) -> data.Price:
+    cents = first.cents + second.cents
+    dollars = first.dollars + second.dollars
+    dollars += cents // 100
+    cut = cents % 100
+    return data.Price(dollars, cut)
+    
     # TODO: Purpose: describe what this function computes.
     # TODO: Input(s): explain each parameter.
     # TODO: Output: explain what the function returns.
@@ -48,15 +74,20 @@ def add_prices(first: data.Price, second: data.Price) -> data.Price:
 
 # Part 5: rectangle_area
 def rectangle_area(rectangle: data.Rectangle) -> float:
+    width = rectangle.bottomr.x - rectangle.topl.x
+    height = rectangle.topl.y - rectangle.right.y
+    return width * height
     # TODO: Purpose: describe what this function computes.
     # TODO: Input(s): explain each parameter.
     # TODO: Output: explain what the function returns.
     # TODO: Replace this exception with your implementation.
+    # Different coordinate positions, including negative coordinates
     raise NotImplementedError("Part 5: implement rectangle_area")
 
 
 # Part 6: books_by_author
 def books_by_author(author: str, books: list[data.Book]) -> list[data.Book]:
+    output
     # TODO: Purpose: describe what this function computes.
     # TODO: Input(s): explain each parameter.
     # TODO: Output: explain what the function returns.
