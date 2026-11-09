@@ -21,31 +21,32 @@ class TestHomework1(unittest.TestCase):
 
     # Part 1: vowel_count
     def test_vowel_count_case_insensitive(self):
-        result = hw1.vowel_count("Apple Cake and Banana Smoothie")
-        # TODO: Arrange inputs, call hw1.vowel_count, and assert the result.
-        self.asserEqual(result, 12)
+        self.asserEqual(hw1.vowel_count("Apple Cake and Banana Smoothie"), 12)
     def test_vowel_count_case_insensitive(self):
-        result = hw1.vowel_count("")
         # TODO: Arrange inputs, call hw1.vowel_count, and assert the result.
-        self.asserEqual(result, 0)
-
-    def test_vowel_count_empty_string(self):
+        self.asserEqual(hw1.vowel_count(""), 0)
+    
         # TODO: Arrange inputs, call hw1.vowel_count, and assert the result.
         self.fail("TODO: write the second unit test for vowel_count")
 
+    
     # Part 2: short_lists
     def test_short_lists_mixed_lengths(self):
-        # TODO: Arrange inputs, call hw1.short_lists, and assert the result.
-        self.fail("TODO: write the first unit test for short_lists")
+        numbers = [[], 1, [2], [3, 4, 5], 6, 7, [8, 9], 10]
+        self.asserEqual(hw1.short_lists(numbers), [[8,9]])
 
     def test_short_lists_no_matching_lengths(self):
+        numbers = [[], 1, [2], [3, 4, 5], 6, 7, [8, 9, 10]]
+        self.asserEqual(hw1.short_lists(numbers), [])
+        
         # TODO: Arrange inputs, call hw1.short_lists, and assert the result.
         self.fail("TODO: write the second unit test for short_lists")
 
+    
     # Part 3: ascending_pairs
     def test_ascending_pairs_reversed_pairs(self):
         # TODO: Arrange inputs, call hw1.ascending_pairs, and assert the result.
-        self.fail("TODO: write the first unit test for ascending_pairs")
+        self.asserEqual("TODO: write the first unit test for ascending_pairs")
 
     def test_ascending_pairs_other_lengths_unchanged(self):
         # TODO: Arrange inputs, call hw1.ascending_pairs, and assert the result.
