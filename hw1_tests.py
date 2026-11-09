@@ -21,8 +21,13 @@ class TestHomework1(unittest.TestCase):
 
     # Part 1: vowel_count
     def test_vowel_count_case_insensitive(self):
+        result = hw1.vowel_count("Apple Cake and Banana Smoothie")
         # TODO: Arrange inputs, call hw1.vowel_count, and assert the result.
-        self.fail("TODO: write the first unit test for vowel_count")
+        self.asserEqual(result, 12)
+    def test_vowel_count_case_insensitive(self):
+        result = hw1.vowel_count("")
+        # TODO: Arrange inputs, call hw1.vowel_count, and assert the result.
+        self.asserEqual(result, 0)
 
     def test_vowel_count_empty_string(self):
         # TODO: Arrange inputs, call hw1.vowel_count, and assert the result.
